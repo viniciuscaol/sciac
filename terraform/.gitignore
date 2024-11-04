@@ -1,0 +1,29 @@
+# Diretório com arquivos de estado do Terraform, que podem conter informações sensíveis
+*.tfstate
+*.tfstate.*
+
+# Logs de execução e arquivos de crash do Terraform
+crash.log
+*.log
+
+# Diretórios de configuração local, cache e arquivos de execução do Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Arquivos de variáveis locais e exemplos que podem conter dados sensíveis
+*.tfvars
+*.tfvars.json
+
+# Arquivos de override, usados localmente e não devem ser compartilhados
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Arquivo de saída de execução do plano do Terraform
+planfile
+*.tfplan
+
+# Arquivos de credenciais e de configuração local da AWS CLI
+.aws/credentials
+.aws/config

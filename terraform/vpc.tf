@@ -10,34 +10,34 @@ resource "aws_vpc" "terraform_vpc" {
 //Subnets publicas
 
 resource "aws_subnet" "publica_a" {
-  vpc_id     = aws_vpc.terraform_vpc.id
-  cidr_block = "10.0.2.0/24"
+  vpc_id            = aws_vpc.terraform_vpc.id
+  cidr_block        = "10.0.2.0/24"
   availability_zone = "a"
 
   tags = {
     Name = "publica-a"
   }
-  depends_on = [ aws_vpc.terraform_vpc ]
+  depends_on = [aws_vpc.terraform_vpc]
 }
 
 resource "aws_subnet" "publica_b" {
-  vpc_id     = aws_vpc.terraform_vpc.id
-  cidr_block = "10.0.3.0/24"
+  vpc_id            = aws_vpc.terraform_vpc.id
+  cidr_block        = "10.0.3.0/24"
   availability_zone = "b"
   tags = {
     Name = "publica-b"
   }
-  depends_on = [ aws_vpc.terraform_vpc ]
+  depends_on = [aws_vpc.terraform_vpc]
 }
 
 resource "aws_subnet" "publica_c" {
-  vpc_id     = aws_vpc.terraform_vpc.id
-  cidr_block = "10.0.4.0/24"
+  vpc_id            = aws_vpc.terraform_vpc.id
+  cidr_block        = "10.0.4.0/24"
   availability_zone = "c"
   tags = {
     Name = "publica-c"
   }
-  depends_on = [ aws_vpc.terraform_vpc ]
+  depends_on = [aws_vpc.terraform_vpc]
 }
 
 //Internet Gateway
@@ -46,41 +46,42 @@ resource "aws_internet_gateway" "terraform_gw" {
   vpc_id = aws_vpc.terraform_vpc.id
 
   tags = {
-    Name = "main"
+    Name = "Internet Gateway"
   }
+  depends_on = [aws_vpc.terraform_vpc]
 }
 
 //Subnets privadas
 
 resource "aws_subnet" "privada_a" {
-  vpc_id     = aws_vpc.terraform_vpc.id
-  cidr_block = "10.0.5.0/24"
+  vpc_id            = aws_vpc.terraform_vpc.id
+  cidr_block        = "10.0.5.0/24"
   availability_zone = "a"
 
   tags = {
     Name = "privada-a"
   }
-  depends_on = [ aws_vpc.terraform_vpc ]
+  depends_on = [aws_vpc.terraform_vpc]
 }
 
 resource "aws_subnet" "privada_b" {
-  vpc_id     = aws_vpc.terraform_vpc.id
-  cidr_block = "10.0.6.0/24"
+  vpc_id            = aws_vpc.terraform_vpc.id
+  cidr_block        = "10.0.6.0/24"
   availability_zone = "b"
   tags = {
     Name = "privada-b"
   }
-  depends_on = [ aws_vpc.terraform_vpc ]
+  depends_on = [aws_vpc.terraform_vpc]
 }
 
 resource "aws_subnet" "privada_c" {
-  vpc_id     = aws_vpc.terraform_vpc.id
-  cidr_block = "10.0.7.0/24"
+  vpc_id            = aws_vpc.terraform_vpc.id
+  cidr_block        = "10.0.7.0/24"
   availability_zone = "c"
   tags = {
     Name = "privada-c"
   }
-  depends_on = [ aws_vpc.terraform_vpc ]
+  depends_on = [aws_vpc.terraform_vpc]
 }
 
 //Nat Gateway
@@ -91,7 +92,7 @@ resource "aws_nat_gateway" "publica_a" {
   tags = {
     Name = "NAT-A"
   }
-  depends_on = [ aws_internet_gateway.terraform_gw ]
+  depends_on = [aws_internet_gateway.terraform_gw]
 }
 
 resource "aws_nat_gateway" "publica_b" {
@@ -100,7 +101,7 @@ resource "aws_nat_gateway" "publica_b" {
   tags = {
     Name = "NAT-B"
   }
-  depends_on = [ aws_internet_gateway.terraform_gw ]
+  depends_on = [aws_internet_gateway.terraform_gw]
 }
 
 resource "aws_nat_gateway" "publica_c" {
@@ -109,5 +110,5 @@ resource "aws_nat_gateway" "publica_c" {
   tags = {
     Name = "NAT-C"
   }
-  depends_on = [ aws_internet_gateway.terraform_gw ]
+  depends_on = [aws_internet_gateway.terraform_gw]
 }

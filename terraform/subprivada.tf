@@ -34,7 +34,7 @@ resource "aws_subnet" "privada_c" {
 resource "aws_subnet" "rds_a" {
   vpc_id            = aws_vpc.terraform_vpc.id
   cidr_block        = "10.0.8.0/24"
-  availability_zone = "a"
+
 
   tags = {
     Name = "rds-a"
@@ -45,7 +45,7 @@ resource "aws_subnet" "rds_a" {
 resource "aws_subnet" "rds_b" {
   vpc_id            = aws_vpc.terraform_vpc.id
   cidr_block        = "10.0.9.0/24"
-  availability_zone = "b"
+
   tags = {
     Name = "rds-b"
   }
@@ -55,7 +55,7 @@ resource "aws_subnet" "rds_b" {
 resource "aws_subnet" "rds_c" {
   vpc_id            = aws_vpc.terraform_vpc.id
   cidr_block        = "10.0.10.0/24"
-  availability_zone = "c"
+
   tags = {
     Name = "rds-c"
   }

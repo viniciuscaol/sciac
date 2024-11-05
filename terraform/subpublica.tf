@@ -3,7 +3,6 @@
 resource "aws_subnet" "publica_a" {
   vpc_id            = aws_vpc.terraform_vpc.id
   cidr_block        = "10.0.2.0/24"
-  availability_zone = "a"
 
   tags = {
     Name = "publica-a"
@@ -14,7 +13,6 @@ resource "aws_subnet" "publica_a" {
 resource "aws_subnet" "publica_b" {
   vpc_id            = aws_vpc.terraform_vpc.id
   cidr_block        = "10.0.3.0/24"
-  availability_zone = "b"
   tags = {
     Name = "publica-b"
   }
@@ -24,7 +22,6 @@ resource "aws_subnet" "publica_b" {
 resource "aws_subnet" "publica_c" {
   vpc_id            = aws_vpc.terraform_vpc.id
   cidr_block        = "10.0.4.0/24"
-  availability_zone = "c"
   tags = {
     Name = "publica-c"
   }

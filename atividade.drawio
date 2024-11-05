@@ -11,12 +11,12 @@
           <mxGeometry x="40" y="120" width="520" height="640" as="geometry" />
         </mxCell>
         <mxCell id="9Nv_gBv1O7w1vaAWKcTw-22" value="Private subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="9Nv_gBv1O7w1vaAWKcTw-2" vertex="1">
-          <mxGeometry x="360" y="440" width="124.99000000000001" height="160" as="geometry" />
+          <mxGeometry x="360" y="440" width="127.49000000000001" height="160" as="geometry" />
         </mxCell>
         <mxCell id="9Nv_gBv1O7w1vaAWKcTw-26" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.rds_instance;" parent="9Nv_gBv1O7w1vaAWKcTw-22" vertex="1">
           <mxGeometry x="35.5" y="35.5" width="49" height="49" as="geometry" />
         </mxCell>
-        <mxCell id="Adose-PHV-qRc2NY3zOG-12" value="CIDR = 10.0.1.0/24" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="9Nv_gBv1O7w1vaAWKcTw-22">
+        <mxCell id="Adose-PHV-qRc2NY3zOG-12" value="CIDR = 10.0.9.0/24" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="9Nv_gBv1O7w1vaAWKcTw-22">
           <mxGeometry x="-2.509999999999991" y="130" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9Nv_gBv1O7w1vaAWKcTw-20" value="Private subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="9Nv_gBv1O7w1vaAWKcTw-2" vertex="1">

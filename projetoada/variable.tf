@@ -51,3 +51,21 @@ variable "key_name" {
   default     = "terraform"
   type        = string
 }
+
+variable "rds_dbname" {
+  description = "Nome do banco de dados"
+  default     = "scadadb"
+  type        = string
+}
+
+variable "rds_username" {
+  description = "Nome do usuário"
+  default     = "scadauser"
+  type        = string
+}
+
+variable "rds_password" {
+  description = "Senha do usuário"
+  type        = string
+  sensitive   = true
+}

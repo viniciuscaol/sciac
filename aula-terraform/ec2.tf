@@ -1,51 +1,51 @@
-resource "aws_instance" "app_1" {
+resource "aws_instance" "app_a" {
   ami               = var.soimage
   instance_type     = var.ec2
   key_name          = var.key_name
-  subnet_id         = aws_subnet.publica_1.id
+  subnet_id         = aws_subnet.publica_a.id
   availability_zone = var.availability_zone_a
   security_groups   = [aws_security_group.http_sg.id]
 
   tags = {
-    Name = "EC2 App 1"
+    Name = "EC2 App A"
   }
 
   depends_on = [
-    aws_subnet.publica_1
+    aws_subnet.publica_a
   ]
 }
 
 
-resource "aws_instance" "app_2" {
+resource "aws_instance" "app_b" {
   ami               = var.soimage
   instance_type     = var.ec2
   key_name          = var.key_name
-  subnet_id         = aws_subnet.publica_2.id
+  subnet_id         = aws_subnet.publica_b.id
   availability_zone = var.availability_zone_b
   security_groups   = [aws_security_group.http_sg.id]
 
   tags = {
-    Name = "EC2 App 2"
+    Name = "EC2 App B"
   }
 
   depends_on = [
-    aws_subnet.publica_2
+    aws_subnet.publica_b
   ]
 }
 
-resource "aws_instance" "app_3" {
+resource "aws_instance" "app_c" {
   ami               = var.soimage
   instance_type     = var.ec2
   key_name          = var.key_name
-  subnet_id         = aws_subnet.publica_3.id
+  subnet_id         = aws_subnet.publica_c.id
   availability_zone = var.availability_zone_c
   security_groups   = [aws_security_group.http_sg.id]
 
   tags = {
-    Name = "EC2 App 3"
+    Name = "EC2 App C"
   }
 
   depends_on = [
-    aws_subnet.publica_3
+    aws_subnet.publica_c
   ]
 }
